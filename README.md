@@ -39,8 +39,8 @@
 
 1. **Clone the Repository**:
 
-   ```bash
-   git clone <your-repository-url>
+   ```bash/terminal of your vs code
+   https://github.com/rashafathima/product-crud.git
    ```
 2. **Navigate to the Folder**:
 
