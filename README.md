@@ -47,8 +47,8 @@
    ```bash
    cd product-crud
    ```
-3. **Running locallyr**:
-   After cloning, To run locally install a live server extension by Ritwick Dey on VS code. Then open the login.html file by using command **code login.html** and then on the bottom right of the VS code, you will get "Go Live" button. Click that while you are on login.html file. It will open locally. Ensure you are on /login.html path initially itself or else it will be on index.html by default. You should be on a path something link: http://127.0.0.1:5500/product-crud/login.html
+3. **Running locally**:
+   After cloning, To run locally install a live server extension by Ritwick Dey on VS code. Then open the login.html file by using command **code login.html** or directly opening via side panel and then on the bottom right of the VS code, you will get "Go Live" button. Click that while you are on login.html file. It will open locally. Ensure you are on /login.html path initially itself or else it will be on index.html by default. You should be on a path something link: http://127.0.0.1:5500/product-crud/login.html. If you aren't on this path, please add the endpoint product-crud/login.html
 4. **Login and Use**:
    Use the following credentials to test login:
 
