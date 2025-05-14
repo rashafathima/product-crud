@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - FakeStore</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <center>
+        <div class="container">
+  <h2>Login</h2>
+  <form id="login-form">
+    <label>Username: <input type="text" id="username" required></label><br><br>
+    <label>Password: <input type="password" id="password" required></label><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="error" style="color:red;"></p>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      fetch('https://fakestoreapi.com/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      })
+        .then(res => {
+          if (!res.ok) throw new Error("Login failed");
+          return res.json();
+        })
+        .then(data => {
+          localStorage.setItem('token', data.token);
+          window.location.href = 'index.html';
+        })
+        .catch(err => {
+          document.getElementById('error').textContent = 'Invalid credentials.';
+        });
+    });
+  </script>
+  </div>
+  </center>
+</body>
+</html>
