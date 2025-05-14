@@ -48,7 +48,7 @@
    cd product-crud
    ```
 3. **Open in a Browser**:
-   Open `index.html` or `login.html` in any modern browser.
+   Open `login.html` in any modern browser. Running locally is pretty simple, either you can double click on the **login.html** file on the folder or install a live server extension by Ritwick Dey and then on the bottom right of the VS code, you will get "Go Live" button. Click that while you are on login.html file. It will open locally. 
 4. **Login and Use**:
    Use the following credentials to test login:
 
@@ -59,6 +59,6 @@
 
 ---
 
-Let me know if you need further modifications!
+Let me know if you need further clarifications!
 
 
